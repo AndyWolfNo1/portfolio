@@ -7,8 +7,13 @@ URL_portal = get_secret('URL_portal')
 
 def main_page(request):
     data = get_raport(URL_portal, 'espi')
-    return HttpResponse(data)
+    day = data[0]
+    raports = data[1]
 
+    return render(request, "main_site.html", {'data' : data, 'day':day, 'raports' : raports})
 
-def api_rest(request):
+def main_rest_api(request):
+    return render(request, "main_rest_api.html")
+
+def rest_api(request):
     return HttpResponse("json")

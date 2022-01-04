@@ -1,0 +1,13 @@
+html {
+    background-color: cornflowerblue;
+    padding: 20px;
+}
+
+html body {
+    background-color: aquamarine;
+    padding:10px;
+}
+
+.navbar{
+    padding:20px;
+}

@@ -1,0 +1,58 @@
+html {
+    background-color: lightblue;
+    padding: 20px;
+}
+
+.container{
+    width:50%;
+}
+
+#day{
+    -webkit-box-shadow: -1px -1px 32px 6px rgba(66, 68, 90, 1);
+    -moz-box-shadow: -1px -1px 32px 6px rgba(66, 68, 90, 1);
+    box-shadow: -1px -1px 32px 6px rgba(66, 68, 90, 1);
+    background-color: royalblue;
+    color: aqua;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    border: 1px solid white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding:20px;
+    text-shadow: black 1px 1px 0;
+}
+
+#r_name{
+    color:dodgerblue;
+}
+
+#read:hover{
+    cursor: pointer;
+    color: deepskyblue;
+}
+
+#table_raports{
+    -webkit-box-shadow: -1px -1px 32px 6px rgba(66, 68, 90, 1);
+    -moz-box-shadow: -1px -1px 32px 6px rgba(66, 68, 90, 1);
+    box-shadow: -1px -1px 32px 6px rgba(66, 68, 90, 1);
+    background-color: darkslategray;
+    font-family: 'Oswald', sans-serif;
+    color: aliceblue;
+    border: 1px solid white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#table_raports td{
+    border-bottom: 1px solid aquamarine;
+    padding:10px;
+    font-size: .8em;
+    text-shadow: black 1px 1px 0;
+}
+
+#table_raports th{
+    border: 1px solid black ;
+    color: #1b0c59;
+    background: #bababa;
+    text-shadow: #e0e0e0 1px 1px 0;
+}

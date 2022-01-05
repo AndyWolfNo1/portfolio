@@ -12,14 +12,14 @@ html {
     -moz-box-shadow: -1px -1px 32px 6px rgba(66, 68, 90, 1);
     box-shadow: -1px -1px 32px 6px rgba(66, 68, 90, 1);
     background-color: royalblue;
-    color: aqua;
+    color: #21eb49;
     font-family: 'Oswald', sans-serif;
     text-align: center;
     border: 1px solid white;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     padding:20px;
-    text-shadow: black 1px 1px 0;
+    text-shadow: black 1px 1px 1px;
 }
 
 #r_name{
@@ -35,7 +35,7 @@ html {
     -webkit-box-shadow: -1px -1px 32px 6px rgba(66, 68, 90, 1);
     -moz-box-shadow: -1px -1px 32px 6px rgba(66, 68, 90, 1);
     box-shadow: -1px -1px 32px 6px rgba(66, 68, 90, 1);
-    background-color: darkslategray;
+    background-color: #0d0d42;
     font-family: 'Oswald', sans-serif;
     color: aliceblue;
     border: 1px solid white;
@@ -47,7 +47,7 @@ html {
     border-bottom: 1px solid aquamarine;
     padding:10px;
     font-size: .8em;
-    text-shadow: black 1px 1px 0;
+    text-shadow: #6153f5 1px 1px 0;
 }
 
 #table_raports th{

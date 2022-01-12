@@ -3,8 +3,9 @@ html {
     padding: 20px;
 }
 
-.container{
-    width:50%;
+.coontainer{
+    width:45%;
+    float:left;
 }
 
 #day{
@@ -55,4 +56,27 @@ html {
     color: #1b0c59;
     background: #bababa;
     text-shadow: #e0e0e0 1px 1px 0;
+}
+
+#right{
+    padding: 50px;
+}
+
+#paginator{
+    background-color:white;
+    border: 1px solid black;
+    width:30px;
+    height:30px;
+    text-align: center;
+    padding: 2px;
+}
+
+#active_paginator{
+    background-color: #0dcaf0;
+    border: 1px solid black;
+    width:30px;
+    height:30px;
+    text-align: center;
+    padding: 2px;
+    color: #0c63e4;
 }

@@ -1,17 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bootstrap %}
 
 {% block title %} REST API {% endblock %}
 
 {% block styl %}
     <link rel="stylesheet" href="{% static 'css/main_site.css' %}">
+    <link rel="stylesheet" href="{% static 'cssbootstramp/bootstrap.min.css' %}">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.0.2/build/rollups/md5.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.16.0/js/md5.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
-    <div class="container">
+    <div class="coontainer">
         <div id="day">
             {{ day }}<br>
         </div>
@@ -24,19 +29,42 @@
                 <th>Czas</th>
                 <th>kliknij</th>
             </tr>
-                {% for raport in raports %}
-                 <tr>
-                    <td>{{ raport.1 }}</td>
-                    <td>{{ raport.2 }}</td>
-                    <td id="r_name">{{ raport.3 }}</td>
-                    <td>{{ raport.4 }}</td>
-                    <td>{{ raport.0 }}</td>
-                    <td id="read">{{ raport.5 }}</td>
-                 </tr>
-                {% endfor %}
-        </table>
+            {% for raport in raports %}
+            <tr id="{{ raport.5 }}">
+                <td>{{ raport.1 }}</td>
+                <td>{{ raport.2 }}</td>
+                <td id="r_name">{{ raport.3 }}</td>
+                <td>{{ raport.4 }}</td>
+                <td>{{ raport.0 }}</td>
+                <td id="read"onclick="control_rapo({{ raport.5 }})">{{ raport.5 }}</td>
+            </trid>
+            {% endfor %}
+        </table><br>
+    <div style="float:right;">
+        {% if raports.has_other_pages %}
+             <ul class="pagination">
+        {% if raports.has_previous %}
+          <li><a href="?page={{ raports.previous_page_number }}">&laquo;</a></li>
+        {% else %}
+          <li class="disabled"><span>&laquo;</span></li>
+        {% endif %}
+        {% for i in raports.paginator.page_range %}
+          {% if raports.number == i %}
+            <span id="active_paginator" class="active"><span>{{ i }} <span class="sr-only"></span></span></span>
+          {% else %}
+            <span id="paginator"><a href="?page={{ i }}">{{ i }}</a></span>
+          {% endif %}
+        {% endfor %}
+        {% if raports.has_next %}
+          <li><a href="?page={{ raports.next_page_number }}">&raquo;</a></li>
+        {% else %}
+          <li class="disabled"><span>&raquo;</span></li>
+        {% endif %}
+            </ul>
+        {% endif %}
     </div>
-    <div class="container">
+    </div>
+    <div class="coontainer" id="right">
 
     </div>
 

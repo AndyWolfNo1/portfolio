@@ -12,4 +12,22 @@ def get_one_raport(nr):
     data = list()
     for i in cd:
         data.append(i.text.replace('\n', ''))
+
+    def print_raport(r_list):
+        dane = dict()
+        for i in range(len(r_list)):
+            if r_list[i].replace(' ', '') in ['Temat', 'Subject']:
+                dane['temat'] = r_list[i + 1]
+            if r_list[i].replace(' ', '') in ['Treśćraportu:', 'Contentsofthereport:']:
+                dane['tresc'] = r_list[i + 1]
+            if r_list[i].replace(' ', '')[:7] == 'Raportb':
+                dane['nr'] = r_list[i]
+            if r_list[i].replace(' ', '')[:6] in ['Datasp', 'Dateof']:
+                dane['data'] = r_list[i]
+            if r_list[i].replace(' ', '')[:8] in ['Skrócona', 'Shortnam']:
+                dane['nazwa'] = r_list[i + 1]
+        return dane
+
+    data = print_raport(data)
+
     return data
